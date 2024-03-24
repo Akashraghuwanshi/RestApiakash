@@ -1,0 +1,8 @@
+__dirname + "/views/index.html" what this + sign doing here
+
+
+The + sign in __dirname + "/views/index.html" is concatenating two strings together. In this case, __dirname represents the directory path of the currently executing script, and "/views/index.html" is a relative path to an HTML file.
+
+So when you use __dirname + "/views/index.html", you're essentially joining the directory path represented by __dirname with the relative path to the HTML file, resulting in an absolute path to the 'index.html' file within the 'views' directory.
+
+For example, if __dirname resolves to '/path/to/your/app', then __dirname + "/views/index.html" would result in '/path/to/your/app/views/index.html'. This absolute path is then used by res.sendFile() to send the specified file to the client in response to an HTTP request.

@@ -1,0 +1,21 @@
+app.use(express.static('css')); what is the meaning of this static files ???
+
+The line app.use(express.static('css')); in the provided Express.js code configures Express to serve static files from the directory named 'css'.
+
+Here's what it means in detail:
+
+express.static(): This is a built-in middleware function in Express.js. It is used to serve static files such as HTML, images, CSS, JavaScript, etc., from a specified directory.
+
+'css' Directory: In this case, the argument passed to express.static() is 'css', which means it will serve static files from the 'css' directory in your project.
+
+Usage with app.use(): The app.use() function mounts the middleware to your Express application. When a request is made to a URL that matches a file within the 'css' directory, Express will serve that file directly to the client.
+              Example
+For example, if you have a CSS file named 'styles.css' located in the 'css' directory of your project, you can include it in your HTML file like this:
+
+html code
+
+<link rel="stylesheet" href="/styles.css">
+
+When a browser requests '/styles.css', Express will serve the 'styles.css' file from the 'css' directory, as configured by the express.static() middleware.
+
+This setup is commonly used for serving static assets like CSS files, images, client-side JavaScript files, and other resources that don't require any special processing by the server. It's a convenient way to make these files accessible to the client without having to handle each request individually in your Express routes.
